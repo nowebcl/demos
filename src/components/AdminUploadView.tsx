@@ -462,18 +462,6 @@ export default function AdminUploadView({
             <span className="hidden sm:inline">Volver al catálogo</span>
             <span className="sm:hidden">Volver</span>
           </button>
-
-          <div className="h-4 w-px bg-neutral-200 hidden sm:block" />
-
-          <div className="flex items-center gap-2">
-            <span
-              className="w-2.5 h-2.5 rounded-full animate-pulse"
-              style={{ backgroundColor: brand.primaryColor }}
-            />
-            <span className="text-xs sm:text-sm font-bold text-[#111111]">
-              Panel de Carga Demo · {brand.name}
-            </span>
-          </div>
         </div>
 
         <div className="flex items-center gap-2 sm:gap-3">
@@ -484,16 +472,6 @@ export default function AdminUploadView({
           >
             <RotateCcw className="w-3.5 h-3.5" />
             <span className="hidden sm:inline">Limpiar</span>
-          </button>
-
-          <button
-            type="button"
-            onClick={handleSubmit}
-            style={{ backgroundColor: brand.primaryColor }}
-            className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold text-white hover:opacity-90 shadow-sm transition-all cursor-pointer active:scale-95"
-          >
-            <CheckCircle2 className="w-4 h-4" />
-            <span>Publicar vehículo</span>
           </button>
 
           <button
