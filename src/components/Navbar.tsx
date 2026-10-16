@@ -15,9 +15,10 @@ export default function Navbar({
   brand,
   onResetView,
 }: NavbarProps) {
-  const whatsappContactUrl = `https://wa.me/${brand.whatsapp}?text=${encodeURIComponent(
-    `Hola ${brand.name}, estoy visitando su catálogo web y me gustaría recibir asesoría.`
-  )}`;
+  const contactText =
+    brand.contactMessage ||
+    `Hola ${brand.name}, estoy visitando su catálogo web y me gustaría recibir asesoría.`;
+  const whatsappContactUrl = `https://wa.me/${brand.whatsapp}?text=${encodeURIComponent(contactText)}`;
 
   return (
     <header className="sticky top-0 z-40 backdrop-blur-xl bg-white/95 border-b border-neutral-100/80 transition-all">

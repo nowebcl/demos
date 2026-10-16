@@ -46,6 +46,7 @@ export interface BrandConfig {
   schedule: string;
   instagram: string;
   email?: string;
+  contactMessage?: string;
 }
 
 export const rapMotorsBrandConfig: BrandConfig = {
@@ -83,11 +84,12 @@ export const demoBrandConfig: BrandConfig = {
   primaryColor: "#111111",
   address: "Av. Vitacura 4500, Santiago",
   city: "Santiago, Región Metropolitana",
-  whatsapp: "56912345678",
-  phoneFormatted: "+56 9 1234 5678",
+  whatsapp: "56987843957",
+  phoneFormatted: "+56 9 8784 3957",
   schedule: "Lun a Vie 09:00 – 19:00 · Sáb 10:00 – 14:00",
   instagram: "@demo.automotriz",
   email: "contacto@demo.cl",
+  contactMessage: "QUIERO CONTRATAR",
 };
 
 export const defaultBrandConfig: BrandConfig = rapMotorsBrandConfig;

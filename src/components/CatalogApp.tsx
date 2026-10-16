@@ -170,9 +170,10 @@ export default function CatalogApp({ initialBrand }: CatalogAppProps) {
     setBrand((prev) => ({ ...prev, primaryColor: color }));
   };
 
-  const whatsappContactUrl = `https://wa.me/${brand.whatsapp}?text=${encodeURIComponent(
-    `Hola ${brand.name}, estoy viendo su App de catálogo y me gustaría consultar por un vehículo.`
-  )}`;
+  const contactText =
+    brand.contactMessage ||
+    `Hola ${brand.name}, estoy viendo su App de catálogo y me gustaría consultar por un vehículo.`;
+  const whatsappContactUrl = `https://wa.me/${brand.whatsapp}?text=${encodeURIComponent(contactText)}`;
 
   const showroomCityName = brand.city
     ? brand.city.split(",")[0].trim().toUpperCase()
@@ -654,7 +655,7 @@ export default function CatalogApp({ initialBrand }: CatalogAppProps) {
                   <span>{brand.schedule}</span>
                 </p>
                 <a
-                  href={`https://wa.me/${brand.whatsapp}`}
+                  href={whatsappContactUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 font-semibold text-[#111111] hover:underline tabular-nums"
