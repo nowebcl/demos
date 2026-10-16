@@ -76,6 +76,20 @@ export const mcrCarsBrandConfig: BrandConfig = {
   email: "Mcrcars30@gmail.com",
 };
 
+export const demoBrandConfig: BrandConfig = {
+  name: "demo.",
+  legalName: "DEMO AUTOMOTRIZ SPA",
+  logoUrl: "/images/demo-logo.svg",
+  primaryColor: "#111111",
+  address: "Av. Vitacura 4500, Santiago",
+  city: "Santiago, Región Metropolitana",
+  whatsapp: "56912345678",
+  phoneFormatted: "+56 9 1234 5678",
+  schedule: "Lun a Vie 09:00 – 19:00 · Sáb 10:00 – 14:00",
+  instagram: "@demo.automotriz",
+  email: "contacto@demo.cl",
+};
+
 export const defaultBrandConfig: BrandConfig = rapMotorsBrandConfig;
 
 export const initialVehicles: Vehicle[] = [
