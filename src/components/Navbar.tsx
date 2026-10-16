@@ -22,7 +22,7 @@ export default function Navbar({
   return (
     <header className="sticky top-0 z-40 backdrop-blur-xl bg-white/95 border-b border-neutral-100/80 transition-all">
       <div className="max-w-[1360px] mx-auto px-4 sm:px-8 h-16 sm:h-24 md:h-28 flex items-center justify-between gap-4">
-        {/* Left: Official Horizontal Brand Logo (moved further right & tuned 4% smaller on PC) */}
+        {/* Left: Official Horizontal Brand Logo */}
         <button
           type="button"
           onClick={onResetView}

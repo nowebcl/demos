@@ -28,6 +28,7 @@ import {
   Car,
   MessageCircle,
   CheckCircle2,
+  PlusCircle,
 } from "lucide-react";
 
 const CATEGORIES: ("Todos" | VehicleCategory)[] = [
@@ -729,6 +730,23 @@ export default function CatalogApp({ initialBrand }: CatalogAppProps) {
           </span>
         </a>
       </nav>
+
+      {/* Floating Action Button at the Bottom: "Subir vehiculo" */}
+      {!isUploadViewOpen && (
+        <button
+          type="button"
+          onClick={() => {
+            setSelectedVehicle(null);
+            setIsUploadViewOpen(true);
+          }}
+          className="fixed left-3 sm:left-6 bottom-20 md:bottom-8 z-40 group flex items-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 rounded-full bg-[#111111] hover:bg-neutral-800 text-white shadow-[0_10px_35px_rgba(0,0,0,0.25)] border border-neutral-700/80 hover:border-neutral-500 text-xs sm:text-sm font-semibold transition-all hover:scale-[1.03] active:scale-[0.97] cursor-pointer backdrop-blur-md"
+          aria-label="Subir vehiculo"
+          title="Subir vehiculo"
+        >
+          <PlusCircle className="w-4 h-4 text-white shrink-0" />
+          <span>Subir vehiculo</span>
+        </button>
+      )}
 
       {/* Toast Notification */}
       {toastMessage && (
