@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --bg-primary: #FFFFFF;
+    --surface-primary: #F5F5F7;
+    --surface-secondary: #FAFAFA;
+    --text-primary: #111111;
+    --text-secondary: #6E6E73;
+    --brand-primary: #DC2626;
+  }
+
+  html,
+  body {
+    background-color: #FFFFFF;
+    color: #111111;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Modern Web Guidance: Native <dialog> scroll containment & backdrop */
+dialog:modal {
+  overscroll-behavior: contain;
+}
+
+dialog::backdrop {
+  overflow: hidden;
+  overscroll-behavior: contain;
+  background-color: rgba(17, 17, 17, 0.35);
+  backdrop-filter: blur(8px);
+}
+
+/* Minimal custom range slider styling */
+input[type="range"].brand-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  background: #E5E5EA;
+  border-radius: 9999px;
+  outline: none;
+}
+
+input[type="range"].brand-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--brand-primary, #DC2626);
+  cursor: pointer;
+  border: 3px solid #FFFFFF;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+  transition: transform 0.15s ease;
+}
+
+input[type="range"].brand-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.08);
+}
+
+input[type="range"].brand-slider::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--brand-primary, #DC2626);
+  cursor: pointer;
+  border: 3px solid #FFFFFF;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+  transition: transform 0.15s ease;
+}
+
+/* Hide scrollbar for clean horizontal pill scrolling on mobile */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
