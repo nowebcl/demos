@@ -133,31 +133,31 @@ export default function VehicleCard({
       </div>
 
       {/* Price & Financing Footer */}
-      <div className="mt-4 pt-3 px-1.5 border-t border-neutral-200/70 flex items-end justify-between gap-2">
-        <div>
-          <span className="block text-[11px] font-medium text-[#6E6E73]">
-            Precio contado / financiamiento
-          </span>
-          <div className="flex items-baseline gap-2">
-            <span
-              className="text-xl font-bold tracking-tight tabular-nums"
-              style={{ color: brand.primaryColor }}
-            >
-              {formatCLP(vehicle.price)}
+      <div className="mt-4 pt-3 px-1.5 border-t border-neutral-200/70 flex items-end justify-between gap-3">
+        <div className="min-w-0">
+          <div className="flex items-center gap-1.5 mb-1">
+            <span className="text-[11px] font-medium text-[#6E6E73]">
+              Precio contado
             </span>
             {vehicle.previousPrice && (
-              <span className="text-xs text-[#6E6E73] line-through tabular-nums">
+              <span className="text-[10px] text-[#8E8E93] line-through tabular-nums">
                 {formatCLP(vehicle.previousPrice)}
               </span>
             )}
           </div>
+          <span
+            className="block text-xl font-bold tracking-tight tabular-nums leading-none"
+            style={{ color: brand.primaryColor }}
+          >
+            {formatCLP(vehicle.price)}
+          </span>
         </div>
 
-        <div className="text-right">
-          <span className="block text-[10px] font-medium text-[#6E6E73]">
+        <div className="text-right shrink-0">
+          <span className="block text-[10px] font-medium text-[#6E6E73] whitespace-nowrap mb-1">
             Cuota ref. (30% pie)
           </span>
-          <span className="text-xs font-semibold text-[#111111] tabular-nums">
+          <span className="block text-xs font-bold text-[#111111] tabular-nums whitespace-nowrap leading-none">
             {formatCLP(estimatedMonthly)}/mes
           </span>
         </div>

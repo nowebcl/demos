@@ -1192,24 +1192,24 @@ export default function AdminUploadView({
                   </div>
 
                   {/* Price & Monthly Quota */}
-                  <div className="mt-3.5 pt-3 border-t border-neutral-200/80 flex items-end justify-between gap-2">
-                    <div>
-                      <span className="block text-[10px] font-bold uppercase tracking-wider text-[#6E6E73]">
-                        Precio al contado
+                  <div className="mt-3.5 pt-3 border-t border-neutral-200/80 flex items-end justify-between gap-3">
+                    <div className="min-w-0">
+                      <span className="block text-[10px] font-bold uppercase tracking-wider text-[#6E6E73] mb-1">
+                        Precio contado
                       </span>
                       <span
-                        className="text-xl font-extrabold tracking-tight tabular-nums"
+                        className="block text-xl font-extrabold tracking-tight tabular-nums leading-none"
                         style={{ color: brand.primaryColor }}
                       >
                         {formatCLP(Number(carPrice) || 0)}
                       </span>
                     </div>
 
-                    <div className="text-right">
-                      <span className="block text-[10px] font-semibold text-[#6E6E73]">
+                    <div className="text-right shrink-0">
+                      <span className="block text-[10px] font-semibold text-[#6E6E73] whitespace-nowrap mb-1">
                         Cuota ref. (30% pie)
                       </span>
-                      <span className="text-xs font-bold text-[#111111] tabular-nums">
+                      <span className="block text-xs font-bold text-[#111111] tabular-nums whitespace-nowrap leading-none">
                         {formatCLP(estimatedMonthly)}/mes
                       </span>
                     </div>
