@@ -2,20 +2,18 @@
 
 import React from "react";
 import { BrandConfig } from "@/data/vehicles";
-import { MessageCircle, PlusCircle } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 
 interface NavbarProps {
   brand: BrandConfig;
   onResetView: () => void;
   onOpenTradeIn?: () => void;
-  onOpenUpload?: () => void;
   totalVehicles: number;
 }
 
 export default function Navbar({
   brand,
   onResetView,
-  onOpenUpload,
 }: NavbarProps) {
   const contactText =
     brand.contactMessage ||
@@ -25,32 +23,18 @@ export default function Navbar({
   return (
     <header className="sticky top-0 z-40 backdrop-blur-xl bg-white/95 border-b border-neutral-100/80 transition-all">
       <div className="max-w-[1360px] mx-auto px-4 sm:px-8 h-16 sm:h-24 md:h-28 flex items-center justify-between gap-4">
-        {/* Left: Official Horizontal Brand Logo + "Subir vehiculo , demo" button */}
-        <div className="flex items-center gap-3 sm:gap-4 ml-2 sm:ml-6 md:ml-10 lg:ml-14">
-          <button
-            type="button"
-            onClick={onResetView}
-            className="flex items-center text-left group focus:outline-none cursor-pointer"
-          >
-            <img
-              src={brand.logoUrl}
-              alt={brand.name}
-              className="h-11 sm:h-16 md:h-[77px] lg:h-[84px] w-auto object-contain transition-transform group-hover:scale-[1.02]"
-            />
-          </button>
-
-          {onOpenUpload && (
-            <button
-              type="button"
-              onClick={onOpenUpload}
-              className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2.5 rounded-full text-xs font-semibold bg-[#111111] hover:bg-neutral-800 text-white transition-all shadow-xs cursor-pointer active:scale-95 border border-neutral-700/60"
-              title="Abrir panel para subir vehículo demo"
-            >
-              <PlusCircle className="w-3.5 h-3.5 text-white shrink-0" />
-              <span>Subir vehiculo , demo</span>
-            </button>
-          )}
-        </div>
+        {/* Left: Official Horizontal Brand Logo */}
+        <button
+          type="button"
+          onClick={onResetView}
+          className="flex items-center text-left group focus:outline-none cursor-pointer ml-2 sm:ml-6 md:ml-10 lg:ml-14"
+        >
+          <img
+            src={brand.logoUrl}
+            alt={brand.name}
+            className="h-11 sm:h-16 md:h-[77px] lg:h-[84px] w-auto object-contain transition-transform group-hover:scale-[1.02]"
+          />
+        </button>
 
         {/* Right: Contacto WhatsApp button */}
         <div className="flex items-center">

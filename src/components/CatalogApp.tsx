@@ -199,10 +199,6 @@ export default function CatalogApp({ initialBrand }: CatalogAppProps) {
           setSelectedVehicle(null);
           setIsUploadViewOpen(false);
         }}
-        onOpenUpload={() => {
-          setSelectedVehicle(null);
-          setIsUploadViewOpen(true);
-        }}
         onOpenTradeIn={() => setIsTradeInModalOpen(true)}
         totalVehicles={vehicles.length}
       />
@@ -736,7 +732,7 @@ export default function CatalogApp({ initialBrand }: CatalogAppProps) {
         </a>
       </nav>
 
-      {/* Floating Action Button on the Left: "Subir vehiculo , demo" */}
+      {/* Floating Action Button at the Bottom: "Subir vehiculo" */}
       {!isUploadViewOpen && (
         <button
           type="button"
@@ -744,22 +740,12 @@ export default function CatalogApp({ initialBrand }: CatalogAppProps) {
             setSelectedVehicle(null);
             setIsUploadViewOpen(true);
           }}
-          className="fixed left-3 sm:left-6 bottom-20 md:bottom-8 z-40 group flex items-center gap-2.5 px-4 sm:px-5 py-2.5 sm:py-3 rounded-full bg-[#111111] hover:bg-neutral-900 text-white shadow-[0_10px_35px_rgba(0,0,0,0.3)] border border-neutral-700/80 hover:border-neutral-500 text-xs sm:text-sm font-semibold transition-all hover:scale-[1.03] active:scale-[0.97] cursor-pointer backdrop-blur-md"
-          aria-label="Subir vehiculo , demo"
-          title="Subir vehículo de prueba al catálogo"
+          className="fixed left-3 sm:left-6 bottom-20 md:bottom-8 z-40 group flex items-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 rounded-full bg-[#111111] hover:bg-neutral-800 text-white shadow-[0_10px_35px_rgba(0,0,0,0.25)] border border-neutral-700/80 hover:border-neutral-500 text-xs sm:text-sm font-semibold transition-all hover:scale-[1.03] active:scale-[0.97] cursor-pointer backdrop-blur-md"
+          aria-label="Subir vehiculo"
+          title="Subir vehiculo"
         >
-          <span className="relative flex h-2.5 w-2.5">
-            <span
-              className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75"
-              style={{ backgroundColor: brand.primaryColor }}
-            />
-            <span
-              className="relative inline-flex rounded-full h-2.5 w-2.5"
-              style={{ backgroundColor: brand.primaryColor }}
-            />
-          </span>
           <PlusCircle className="w-4 h-4 text-white shrink-0" />
-          <span className="font-bold">Subir vehiculo , demo</span>
+          <span>Subir vehiculo</span>
         </button>
       )}
 
