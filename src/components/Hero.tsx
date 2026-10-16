@@ -26,7 +26,7 @@ export default function Hero({
         <div className="absolute inset-0 pointer-events-none select-none">
           <img
             src="/images/hero-mobile.jpg"
-            alt="Toyota Corolla Hatchback - Rap Motors"
+            alt={`Catálogo - ${brand.name}`}
             fetchPriority="high"
             className="w-full h-full object-cover object-bottom"
           />
@@ -72,7 +72,7 @@ export default function Hero({
         <div className="absolute inset-0 pointer-events-none select-none">
           <img
             src="/images/hero-desktop.jpg"
-            alt="Toyota Corolla Hatchback - Rap Motors"
+            alt={`Catálogo - ${brand.name}`}
             fetchPriority="high"
             className="w-full h-full object-cover object-center"
           />

@@ -42,11 +42,13 @@ export interface BrandConfig {
   address: string;
   city: string;
   whatsapp: string;
+  phoneFormatted?: string;
   schedule: string;
   instagram: string;
+  email?: string;
 }
 
-export const defaultBrandConfig: BrandConfig = {
+export const rapMotorsBrandConfig: BrandConfig = {
   name: "RAP MOTORS",
   legalName: "RAP MOTORS SPA",
   logoUrl: "/images/logo.png",
@@ -54,9 +56,27 @@ export const defaultBrandConfig: BrandConfig = {
   address: "Luis Ross 445, Puerto Montt",
   city: "Puerto Montt, Región de Los Lagos",
   whatsapp: "56936313589",
+  phoneFormatted: "+56 9 3631 3589",
   schedule: "Lun a Vie 09:30 – 19:00 · Sáb 10:00 – 14:30",
   instagram: "@rapmotors.cl",
+  email: "contacto@rapmotors.cl",
 };
+
+export const mcrCarsBrandConfig: BrandConfig = {
+  name: "MCR Cars",
+  legalName: "MCR CARS SPA",
+  logoUrl: "/LOGOS/2.png",
+  primaryColor: "#FA0002",
+  address: "Rómulo Correa 0945 casa 27, Punta Arenas",
+  city: "Punta Arenas, Región de Magallanes",
+  whatsapp: "56996134771",
+  phoneFormatted: "+56 9 9613 4771",
+  schedule: "Lun 10:00 – 18:30 · Mar a Vie 10:00 – 19:00",
+  instagram: "@mcrcars30",
+  email: "Mcrcars30@gmail.com",
+};
+
+export const defaultBrandConfig: BrandConfig = rapMotorsBrandConfig;
 
 export const initialVehicles: Vehicle[] = [
   {

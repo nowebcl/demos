@@ -768,7 +768,7 @@ export default function VehicleDetailView({
                 Otras unidades en stock que podrían interesarte
               </h2>
               <p className="text-xs sm:text-sm text-[#6E6E73]">
-                Disponibles para entrega inmediata en Puerto Montt
+                Disponibles para entrega inmediata en {brand.city ? brand.city.split(',')[0] : brand.name}
               </p>
             </div>
           </div>

@@ -124,7 +124,7 @@ export default function TradeInModal({
         <p className="mt-4 text-xs sm:text-sm text-[#6E6E73] leading-relaxed">
           Recibimos tu vehículo como pie para tu próximo seminuevo en{" "}
           <strong className="text-[#111111]">{brand.name}</strong> o lo
-          compramos con pago inmediato y transferencia segura en Puerto Montt.
+          compramos con pago inmediato y transferencia segura en {brand.city ? brand.city.split(',')[0] : brand.name}.
         </p>
 
         <div className="mt-5 space-y-3.5">
