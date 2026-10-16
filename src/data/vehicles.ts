@@ -92,6 +92,20 @@ export const demoBrandConfig: BrandConfig = {
   contactMessage: "QUIERO CONTRATAR",
 };
 
+export const losAndesBrandConfig: BrandConfig = {
+  name: "Automotora Los Andes",
+  legalName: "AUTOMOTORA LOS ANDES SPA",
+  logoUrl: "/LOGOS/los-andes-badge.png",
+  primaryColor: "#35A5C2",
+  address: "Regimiento Esq. Maratón, Puerto Montt",
+  city: "Puerto Montt, Región de Los Lagos",
+  whatsapp: "56974031285",
+  phoneFormatted: "+56 9 7403 1285",
+  schedule: "Lun a Vie 09:30 – 19:00 · Sáb 10:00 – 14:00",
+  instagram: "@automotoralosandes",
+  email: "contacto@automotoralosandes.cl",
+};
+
 export const defaultBrandConfig: BrandConfig = rapMotorsBrandConfig;
 
 export const initialVehicles: Vehicle[] = [
