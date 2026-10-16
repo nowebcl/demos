@@ -8,9 +8,18 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "RAP MOTORS | Catálogo de Seminuevos y Financiamiento en Puerto Montt",
+  title: "Catálogo de Seminuevos y Financiamiento Automotriz",
   description:
-    "Compra, venta y financiamiento automotriz sin burocracia en Luis Ross 445, Puerto Montt. Seminuevos seleccionados con evaluación inmediata.",
+    "Compra, venta y financiamiento automotriz sin burocracia. Seminuevos seleccionados con evaluación inmediata.",
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: [
+      { url: "/apple-icon.svg", type: "image/svg+xml" },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -20,6 +29,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es-CL" className="bg-white text-[#111111]">
+      <head>
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="apple-touch-icon" href="/apple-icon.svg" />
+      </head>
       <body className={`${inter.className} min-h-screen bg-white text-[#111111] selection:bg-red-600 selection:text-white`}>
         {children}
       </body>

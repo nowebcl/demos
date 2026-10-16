@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- iOS App Icon Premium Dark Gradient -->
+    <linearGradient id="iosBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#24262B"/>
+      <stop offset="35%" stop-color="#16171A"/>
+      <stop offset="100%" stop-color="#090A0C"/>
+    </linearGradient>
+
+    <!-- Glass Specular Border -->
+    <linearGradient id="iosBorder" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.25"/>
+      <stop offset="40%" stop-color="#FFFFFF" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.02"/>
+    </linearGradient>
+
+    <!-- Top Gloss Sheen -->
+    <radialGradient id="topSheen" cx="50%" cy="10%" r="70%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.16"/>
+      <stop offset="60%" stop-color="#FFFFFF" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Metallic Car Body Paint Gradient -->
+    <linearGradient id="carBody" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="25%" stop-color="#F1F5F9"/>
+      <stop offset="65%" stop-color="#CBD5E1"/>
+      <stop offset="100%" stop-color="#94A3B8"/>
+    </linearGradient>
+
+    <!-- Windshield Dark Glass -->
+    <linearGradient id="carGlass" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="70%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+
+    <!-- Headlight Neon Accent Glow -->
+    <linearGradient id="headlightBeam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#E0F2FE"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- 1. iPhone App Squircle Background (22.5% corner radius) -->
+  <rect x="8" y="8" width="496" height="496" rx="112" fill="url(#iosBg)"/>
+  <rect x="8" y="8" width="496" height="496" rx="112" fill="url(#topSheen)"/>
+  <rect x="10" y="10" width="492" height="492" rx="110" fill="none" stroke="url(#iosBorder)" stroke-width="4"/>
+
+  <!-- 2. Car Illustration Group (Centered & High-Contrast) -->
+  <g transform="translate(0, 18)">
+    <!-- Road Ground Shadow -->
+    <ellipse cx="256" cy="386" rx="170" ry="18" fill="#000000" opacity="0.6"/>
+
+    <!-- Left & Right Wide Tires -->
+    <rect x="100" y="306" width="44" height="74" rx="14" fill="#0B0D11" stroke="#334155" stroke-width="3"/>
+    <rect x="368" y="306" width="44" height="74" rx="14" fill="#0B0D11" stroke="#334155" stroke-width="3"/>
+
+    <!-- Aerodynamic Mirrors -->
+    <path d="M 86 244 C 86 236 122 236 132 242 L 132 254 C 122 258 86 254 86 244 Z" fill="#E2E8F0" stroke="#0F172A" stroke-width="2"/>
+    <path d="M 426 244 C 426 236 390 236 380 242 L 380 254 C 390 258 426 254 426 244 Z" fill="#E2E8F0" stroke="#0F172A" stroke-width="2"/>
+
+    <!-- Main Car Body Silhouette -->
+    <path d="M 148 244 
+             C 146 196, 172 144, 204 132 
+             C 226 124, 286 124, 308 132 
+             C 340 144, 366 196, 364 244 
+             L 384 254 
+             C 398 262, 404 274, 400 294 
+             L 392 344 
+             C 390 358, 378 366, 364 366 
+             L 148 366 
+             C 134 366, 122 358, 120 344 
+             L 112 294 
+             C 108 274, 114 262, 128 254 
+             Z" 
+          fill="url(#carBody)"/>
+
+    <!-- Cabin / Panoramic Windshield -->
+    <path d="M 200 144 
+             C 214 136, 298 136, 312 144 
+             C 328 152, 344 196, 348 232 
+             L 164 232 
+             C 168 196, 184 152, 200 144 
+             Z" 
+          fill="url(#carGlass)"/>
+
+    <!-- Glass Specular Reflection Streak -->
+    <polygon points="208,148 226,226 242,226 226,148" fill="#FFFFFF" opacity="0.14"/>
+
+    <!-- Sculpted Hood Creases -->
+    <path d="M 176 248 C 196 264, 316 264, 336 248" fill="none" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 220 236 L 210 274" fill="none" stroke="#94A3B8" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+    <path d="M 292 236 L 302 274" fill="none" stroke="#94A3B8" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+
+    <!-- High-Tech Sharp LED Matrix Headlights -->
+    <!-- Left Light -->
+    <polygon points="132,274 186,270 178,288 128,284" fill="url(#headlightBeam)" filter="url(#neonGlow)"/>
+    <polygon points="134,275 184,272 177,286 131,283" fill="#FFFFFF"/>
+    <!-- Right Light -->
+    <polygon points="380,274 326,270 334,288 384,284" fill="url(#headlightBeam)" filter="url(#neonGlow)"/>
+    <polygon points="378,275 328,272 335,286 381,283" fill="#FFFFFF"/>
+
+    <!-- Sport Grille & Front Bumper Air Dam -->
+    <rect x="188" y="306" width="136" height="40" rx="10" fill="#0B0D11" stroke="#334155" stroke-width="2"/>
+    <!-- Horizontal Grille Slats -->
+    <line x1="202" y1="318" x2="310" y2="318" stroke="#475569" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="208" y1="328" x2="304" y2="328" stroke="#475569" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="216" y1="338" x2="296" y2="338" stroke="#475569" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Lower Carbon Front Lip Splitter -->
+    <path d="M 152 360 L 360 360" stroke="#0F172A" stroke-width="7" stroke-linecap="round"/>
+  </g>
+</svg>
